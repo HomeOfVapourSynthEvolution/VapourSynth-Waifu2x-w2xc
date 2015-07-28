@@ -32,7 +32,8 @@ struct Waifu2xData {
     VSNodeRef * node;
     VSVideoInfo vi;
     int noise, scale, block;
-    bool photo, gpu;
+    bool photo;
+    W2XConvGPUMode gpu;
     int iterTimesTwiceScaling;
 };
 
@@ -265,9 +266,9 @@ static void VS_CC waifu2xCreate(const VSMap *in, VSMap *out, void *userData, VSC
     if (err)
         d.block = 512;
     d.photo = !!vsapi->propGetInt(in, "photo", 0, &err);
-    d.gpu = !!vsapi->propGetInt(in, "gpu", 0, &err);
+    d.gpu = static_cast<W2XConvGPUMode>(vsapi->propGetInt(in, "gpu", 0, &err));
     if (err)
-        d.gpu = true;
+        d.gpu = W2XCONV_GPU_AUTO;
 
     if (d.noise < 0 || d.noise > 2) {
         vsapi->setError(out, "Waifu2x: noise must be set to 0, 1 or 2");

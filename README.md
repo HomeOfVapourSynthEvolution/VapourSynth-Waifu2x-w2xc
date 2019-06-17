@@ -54,10 +54,10 @@ Usage
 Compilation
 ===========
 
-Requires [w2xc](https://github.com/DeadSix27/waifu2x-converter-cpp). The script doesn't copy the `models` folder, hence you have to do it yourself.
+Requires [w2xc](https://github.com/DeadSix27/waifu2x-converter-cpp).
 
 ```
-./autogen.sh
-./configure
-make
+meson build
+ninja -C build
+ninja -C build install
 ```

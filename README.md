@@ -45,9 +45,9 @@ Usage
 
 * processor: Sets target processor. Any non-negative value supersedes the choice from `gpu`. Use `list_proc` to get the index of the available processors.
 
-* list_proc: Whether the processors list is drawn on the frame.
+* list_proc: Whether to draw the processors list on the frame.
 
-* log: Whether the internal processing stats are written to stdout.
+* log: Whether to write the internal processing stats to stdout.
 
 
 Compilation

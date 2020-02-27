@@ -7,7 +7,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <UseNativeEnvironment>true</UseNativeEnvironment>
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{34D066DE-6A74-456D-9098-5A332DF1ED37}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -20,7 +19,7 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -32,7 +31,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Program Files %28x86%29\VapourSynth\sdk\include\vapoursynth;..\libw2xc;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Program Files\VapourSynth\sdk\include\vapoursynth;..\libw2xc;$(IncludePath)</IncludePath>
     <LibraryPath>..\libw2xc;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

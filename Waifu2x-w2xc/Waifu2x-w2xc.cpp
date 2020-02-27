@@ -28,6 +28,7 @@
 #include <VapourSynth.h>
 #include <VSHelper.h>
 
+#define HAVE_OPENCV
 #include <w2xconv.h>
 
 struct Waifu2xData {
